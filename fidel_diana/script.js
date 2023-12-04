@@ -52,8 +52,8 @@ function createCountryCard(country) {
         <p>Region: ${country.region}</p>
         <p>Capital: ${country.capital}</p>
         <p>Population: ${country.population}</p>
-        <p>Area: ${country.area ?
-		`${country.area} square kilometers` : ''}</p>
+        <p>Area: ${country.area ?`${country.area} 
+			square kilometers` : ''}</p>
         <p>Languages: 
 		${Object.values(country.languages).join(', ')}</p>
     `;
@@ -63,8 +63,8 @@ function createCountryCard(country) {
 function displayRegionCountries(countries, searchedCountryName) {
     const regionCountriesContainer =
 		document.getElementById('region_countries');
-		regionCountriesContainer.innerHTML = 
-			'<h3>Other Countries in the Same Region:</h3>';
+	regionCountriesContainer.innerHTML = 
+		'<h3>Other Countries in the Same Region:</h3>';
 
     const countriesList = document.createElement('ul');
 
