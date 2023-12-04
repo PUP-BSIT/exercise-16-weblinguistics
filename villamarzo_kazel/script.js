@@ -2,8 +2,8 @@ async function searchCountry() {
     const searchInput = document.getElementById('search_input').value;
 
     try {
-        const response = 
-		await fetch(`https://restcountries.com/v3.1/name/${searchInput}`);
+        const response = await fetch
+			(`https://restcountries.com/v3.1/name/${searchInput}`);
         const countryData = await response.json();
 
         if (!countryData.length) {
@@ -33,10 +33,9 @@ async function searchCountry() {
 async function loadRegionCountries(region, searchedCountryName) {
     try {
         const response = 
-		await fetch(`https://restcountries.com/v3.1/region/${region}`);
+			await fetch(`https://restcountries.com/v3.1/region/${region}`);
         const data = await response.json();
-
-        // Clear previous results
+		
         document.getElementById('region_countries').innerHTML = '';
 
         displayRegionCountries(data, searchedCountryName);
@@ -62,9 +61,9 @@ function createCountryCard(country) {
 
 function displayRegionCountries(countries, searchedCountryName) {
     const regionCountriesContainer =
-	document.getElementById('region_countries');
-    regionCountriesContainer.innerHTML = 
-	'<h3>Other Countries in the Same Region:</h3>';
+		document.getElementById('region_countries');
+		regionCountriesContainer.innerHTML = 
+			'<h3>Other Countries in the Same Region:</h3>';
 
     const countriesList = document.createElement('ul');
 
