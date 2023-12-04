@@ -50,6 +50,10 @@ function sortComments(order) {
   });
 }
 
+function navigateToCountries() {
+    window.location.href = "countries.html";
+}
+
 nameInput.addEventListener("input", checkInputs);
 commentInput.addEventListener("input", checkInputs);
 commentButton.addEventListener("click", addComment);
