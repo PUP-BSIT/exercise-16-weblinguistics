@@ -102,3 +102,15 @@ a:hover {
 	border: 5px solid #C34A2C;
 	padding: 10px 20px;
 }
+button#countries_button {
+    padding: 10px;
+    border: 2px solid black;
+    color: #ffffff;
+    background-color: green;
+    font-weight: 700;
+    cursor: pointer;
+	justify-content: center;
+}
+
+button#countries_button:hover {
+    background-color: darkgreen;
