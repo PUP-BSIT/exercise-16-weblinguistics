@@ -1,3 +1,7 @@
+function navigateToCountries() {
+    window.location.href = "index.html";
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const commentButton = document.getElementById('comment_button');
     const commentText = document.getElementById('comment_text');
