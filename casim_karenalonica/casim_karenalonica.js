@@ -1,5 +1,5 @@
 function navigateToCountries() {
-    window.location.href = "html.html";
+    window.location.href = "countries.html";
 }
 
 document.addEventListener('DOMContentLoaded', function () {
