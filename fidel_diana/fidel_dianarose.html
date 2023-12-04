@@ -43,7 +43,7 @@
 				is that you make ways to light up the ambiance
 				while we're working with each others
 				and you are very easy to contact. 
-				I like your perseverance too.
+				I like your perseverance too. 
 				I'm hoping for us to be on one team more soon!"
 				- JAMES NABAYRA</p>
 				<p>"Hi D! I hope we can do this until 
@@ -66,36 +66,38 @@
 				</ul>
 
 		<label for="sort">Sort by:</label>
-			<select id="sort">
+				<select id="sort">
 				<option value="asc">Ascending</option>
 				<option value="desc">Descending</option>
-			</select>
-			
-		<div id="comments">
-			<h3>Teammate Comments</h3>
-				<p>data-date="2023-11-01"<strong>Name:</strong> 
-				Karen Alonica Casim</p>
-				<p>data-date="2023-11-01">Best wishes on 
-				achieving your goals in life.</p>
-				<p>data-date="2023-11-02<strong>Name:</strong>
-				Ed Judah Mingo</p>
-				<p>data-date="2023-11-02">Sanaol tapos na sa
-				exercise 10.</p>
-				<p>data-date="2023-12-03<strong>Name:</strong>
-				James Nabayra</p>
-				<p>data-date="2023-11-03">I know that you will 
-				obtain those goals of yours in life
-				Diana because you are persevered 
-				and you always find ways to learn and 
-				to be more knowledgeable.
-				I know that you can strive in life. 
-				Just don't give up, we can do this Diana!</p>
-				<p>data-date="2023-11-04"<strong>Name:</strong>
-				Kazel Villamarzo</p>
-				<p>data-date="2023-11-04">You are so kind and
-				brave person i know 
-				that you can achive yur success.</p>
+			</select>		
+		<div id="comments_section">
+			<h2>Comments:</h2>
+			<div id="comments" class="comment-container">
+				<div class="comment-container" data-timestamp="2023-11-01">
+					<p><strong>Name:</strong>Karen Alonica Casim</p>
+					<p>Best wishes on achieving your goals in life.</p>
+				</div>
+				<div class="comment-container" data-timestamp="2023-11-02">
+					<p><strong>Name:</strong>Ed Judah Mingo</p>
+					<p>Sanaol tapos na sa exercise 10.</p>
+				</div>
+				<div class="comment-container" data-timestamp="2023-11-03">
+					<p><strong>Name:</strong>James Nabayra</p>
+					<p>I know that you will diana obtain those goals of 
+					yours in life Diana because you are persevered obtain
+					those goals of yours in life Diana because you
+					are persevered main and you always find ways to learn 
+					and to be more knowledgeable. I know that you can strive
+					in life. Just don't give up, we can do this Diana!</p>
+				</div>
+				<div class="comment-container" data-timestamp="2023-11-04">
+					<p><strong>Name:</strong>Kazel Villamarzo</p>
+					<p>You are so kind and brave person i know that you 
+					can achive yur success.</p>
+				</div>
+			</div>
 		</div>
+
 		<div id="comment_form">
 				<label for="name">Name:</label>
 				<input type="text" id="name" required>
@@ -103,23 +105,25 @@
 				<textarea id="comment_text" required></textarea>
 				<button id="comment_button">Comment</button>
 		</div>
-		
+		<button id="countries_button" onclick="navigateToCountries()">
+			Go to Countries Page</button>
 		<div>
 			<h2>Gallery</h2>
-				<img src="image/japan.png" width="900" height="500"
-				border="5px solid"
-				<img src="image/switz.png" width="900" height="500"
+				<img src="image/japan.png" width="500" height="300" 
 				border="5px solid">
-				<img src="image/norway.png" width="900" height="500"
+				<img src="image/switz.png" width="500" height="300"
 				border="5px solid">
-				<img src="image/korea.png" width="900" height="500"
+				<img src="image/norway.png" width="500" height="300" 
 				border="5px solid">
-				<img src="image/paris.png" width="900" height="500"
+				<img src="image/korea.png" width="500" height="300" 
 				border="5px solid">
-				<img src="image/singapore.png" width="900" height="500"
+				<img src="image/paris.png" width="500" height="300" 
+				border="5px solid">
+				<img src="image/singapore.png" width="500" height="300"
 				border="5px solid">
 		</div>
 
 		<script src="scripttt.js"></script>
+
 	</body>
 </html>

@@ -1,42 +1,33 @@
-body, h1, h2, h3, ul, ol, p {
+/* fidel_dianarose.css */
+
+/* Reset some default browser styles */
+body, h1, h2, p, ul, ol, li, img {
     margin: 0;
     padding: 0;
 }
 
 body {
+    background-color: #E5D3B3;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 20px;
-}
-
-div {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #5C3D28;
+    line-height: 1.6;
 }
 
 h1 {
-    color: #C34A2C;
+    color: #fff;
+    background-color: #8B735B;
+    padding: 20px;
 }
 
-h2 {
-    color: #4CAF50;
-}
-
-ul, ol {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-li {
-    list-style-type: none;
-    margin-bottom: 10px;
+div {
+    background-color: #D2B48C;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 a {
-    color: #C34A2C;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -44,35 +35,74 @@ a:hover {
     text-decoration: underline;
 }
 
-img {
-    margin: 10px;
-    border: 5px solid #C34A2C;
+ul, ol {
+    list-style: none;
+}
+
+#testimonial p {
+    border-left: 2px solid #8B735B;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+#my_goals ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+#comments_section {
+    background-color: #F0EAD6;
+    margin-top: 20px;
     border-radius: 10px;
 }
 
-#my-goals ul {
-    list-style-type: none;
+.comment-container {
+    border: 1px solid #8B735B;
+    background-color: #F0EAD6;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-#comments, #comment-form {
+#comment_form {
+    margin-top: 20px;
+    border: 1px solid #8B735B;
+    background-color: #F0EAD6;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#comment_form label,
+#comment_form input,
+#comment_form textarea,
+#comment_form button {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#gallery-container {
+    background-color: #F0EAD6;
+    border: 1px solid #8B735B;
+    border-radius: 8px;
+    padding: 20px;
     margin-top: 20px;
 }
 
-#comment-form input, 
-#comment-form textarea, 
-#comment-form button {
-    margin-bottom: 10px;
+#gallery-container img {
+    margin: 10px;
+    border: 5px solid #D2B48C;
+    border-radius: 10px;
 }
-.gallery-image {
-	width: 100%; 
-	max-width: 100%; 
-	height: auto; 
-	border: 5px solid #C34A2C;
-	padding: 10px 20px;
-}#sort {
-	background-color: #387785;
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	cursor: pointer;
+button#countries_button {
+    padding: 10px;
+    border: 2px solid #8B735B; /* Darker pastel brown */
+    color: #ffffff;
+    background-color: #D2B48C; /* Light pastel brown */
+    font-weight: 700;
+    cursor: pointer;
+    justify-content: center;
+}
+
+button#countries_button:hover {
+    background-color: #B8860B; /* Goldenrod - adjust to your preferred hover color */
 }
