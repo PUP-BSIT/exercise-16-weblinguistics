@@ -44,3 +44,22 @@ a:hover {
     background-color: teal;
     color: white;
 }
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+
+    ul {
+        width: 90%;
+    }
+
+    li {
+        width: 100%;
+    }
+
+    a {
+        padding: 15px;
+    }
+}
