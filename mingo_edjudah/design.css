@@ -57,7 +57,8 @@ body {
 #section4,
 #section5,
 #section6,
-#comment_form {
+#comment_form,
+#countries_button {
     padding: 10px;
     padding-left: 30px;
     margin: 0 20px;
@@ -81,7 +82,8 @@ body {
 #section4, 
 #section5,
 #section6,
-#comment_form {
+#comment_form,
+#countries_button {
     margin-bottom: 20px;
 }
 
@@ -154,6 +156,19 @@ body {
 }
 
 #comment_form button:hover {
+    background-color: #45a049;
+}
+
+#countries_button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#countries_button:hover {
     background-color: #45a049;
 }
 
