@@ -33,7 +33,7 @@ async function searchCountry() {
 async function loadRegionCountries(region, searchedCountryName) {
     try {
         const response = await fetch
-		(`https://restcountries.com/v3.1/region/${region}`);
+			(`https://restcountries.com/v3.1/region/${region}`);
         const data = await response.json();
 
         displayRegionCountries(data, searchedCountryName);
@@ -59,9 +59,9 @@ function createCountryCard(country) {
 
 function displayRegionCountries(countries, searchedCountryName) {
     const regionCountriesContainer = 
-	document.getElementById('region_countries');
+		document.getElementById('region_countries');
     regionCountriesContainer.innerHTML = 
-	`<h3>Other Countries in the Same Region:</h3>`;
+		`<h3>Other Countries in the Same Region:</h3>`;
 
     const countriesList = document.createElement('ul');
 
