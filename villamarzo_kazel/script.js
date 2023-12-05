@@ -1,7 +1,3 @@
-function goToCountryWebpage() {
-  window.location.href = "index.html";
-}
-
 async function searchCountry() {
   const searchInput = document.getElementById('search_input').value;
 
@@ -9,7 +5,6 @@ async function searchCountry() {
     const countryResponse = 
 		await fetch(`https://restcountries.com/v3.1/name/${searchInput}`);
     const countryData = await countryResponse.json();
-
     const country = countryData[0];
     const region = country?.region;
 
@@ -49,6 +44,6 @@ function displayRegionCountries(regionCountries) {
 	document.getElementById('region_countries');
   regionCountriesContainer.innerHTML =
     `<p><strong>Other countries in the same region:</strong></p>
-    <ul>${regionCountries.map(country =>
+    <ul>${regionCountries.map(country =
 		`<li>${country.name.common}</li>`).join('')}</ul>`;
 }
