@@ -2,6 +2,10 @@ body {
 	font-family: 'Arial', 'Roboto', 'Comic sans', sans-serif;
 	margin: 0;
 	padding: 0;
+    background-image: url('bg_design.gif');
+    background-color: #f2f2f2;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #header {
@@ -62,7 +66,7 @@ body {
     padding: 10px;
     padding-left: 30px;
     margin: 0 20px;
-    background-color: lightgray;
+    background-color: #D6EAF8;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
@@ -88,25 +92,25 @@ body {
 }
 
 #section3 {
-    background-color: #E8DAEF ;
+    background-color: #D6EAF8 ;
 }
 
 #section4 {
-    background-color: #FFCFCF;
+    background-color: #D6EAF8;
 }
 
 #section5 {
-    background-color: #FFD290;
+    background-color: #D6EAF8;
 }
 
 #section6{
-    background-color: #FFFDBF;
+    background-color: #D6EAF8;
 }
 
 #comment_form {
     padding: 10px;
     margin: 0 20px 20px;
-    background-color: #C1FEC3;
+    background-color: #D6EAF8;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
@@ -130,7 +134,7 @@ body {
 }
 
 #form_container button {
-    background-color: #4CAF50;
+    background-color: #86C9CA;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -139,7 +143,7 @@ body {
 }
 
 #form_container button:hover {
-    background-color: #45a049;
+    background-color: #76999A;
 }
 
 .comment {
@@ -147,7 +151,7 @@ body {
 }
 
 #comment_form button {
-    background-color: #4CAF50;
+    background-color: #86C9CA;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -156,11 +160,11 @@ body {
 }
 
 #comment_form button:hover {
-    background-color: #45a049;
+    background-color: #76999A;
 }
 
 #countries_button {
-    background-color: #4CAF50;
+    background-color: #86C9CA;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -169,7 +173,7 @@ body {
 }
 
 #countries_button:hover {
-    background-color: #45a049;
+    background-color: #76999A;
 }
 
 #footer {
