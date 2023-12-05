@@ -20,8 +20,8 @@ async function searchCountry() {
 
       displayCountryDetails(country);
 
-      const otherCountries = regionCountries.filter(
-		c => !c.name.common.includes(country.name.common));
+      const otherCountries = regionCountries.filter
+		(c => !c.name.common.includes(country.name.common));
       displayRegionCountries(otherCountries);
     } else {
       alert('Country not found.');
