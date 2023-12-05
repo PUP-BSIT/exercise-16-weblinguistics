@@ -1,7 +1,3 @@
-function goToCountryWebpage() {
-  window.location.href = "index.html";
-}
-
 async function searchCountry() {
   const searchInput = document.getElementById('search_input').value;
 
