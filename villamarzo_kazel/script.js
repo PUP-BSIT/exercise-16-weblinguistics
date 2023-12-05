@@ -5,7 +5,6 @@ async function searchCountry() {
     const countryResponse = 
 		await fetch(`https://restcountries.com/v3.1/name/${searchInput}`);
     const countryData = await countryResponse.json();
-
     const country = countryData[0];
     const region = country?.region;
 
@@ -16,8 +15,8 @@ async function searchCountry() {
 
       displayCountryDetails(country);
 
-      const otherCountries = regionCountries.filter(
-		c => !c.name.common.includes(country.name.common));
+      const otherCountries = regionCountries.filter
+		(c => !c.name.common.includes(country.name.common));
       displayRegionCountries(otherCountries);
     } else {
       alert('Country not found.');
@@ -45,6 +44,6 @@ function displayRegionCountries(regionCountries) {
 	document.getElementById('region_countries');
   regionCountriesContainer.innerHTML =
     `<p><strong>Other countries in the same region:</strong></p>
-    <ul>${regionCountries.map(country =>
- `<li>${country.name.common}</li>`).join('')}</ul>`;
+    <ul>${regionCountries.map(country =
+		`<li>${country.name.common}</li>`).join('')}</ul>`;
 }
