@@ -41,7 +41,8 @@ function displayCountryDetails(country) {
 }
 
 function displayRegionCountries(regionCountries) {
-  const regionCountriesContainer = document.getElementById('region_countries');
+  const regionCountriesContainer =
+	document.getElementById('region_countries');
   regionCountriesContainer.innerHTML =
     `<p><strong>Other countries in the same region:</strong></p>
     <ul>${regionCountries.map(country => 
