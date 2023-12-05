@@ -1,77 +1,58 @@
+function goToCountryWebpage() {
+    window.location.href = "countries.html";
+}
+
 async function searchCountry() {
     const searchInput = document.getElementById('search_input').value;
 
     try {
-        const response = await fetch
-			(`https://restcountries.com/v3.1/name/${searchInput}`);
-        const countryData = await response.json();
-
-        if (!countryData.length) {
-            throw new Error("Country not found");
-        }
+        const countryResponse = await 
+            fetch(`https://restcountries.com/v3.1/name/${searchInput}`);
+        const countryData = await countryResponse.json();
 
         const country = countryData[0];
-        const region = country.region;
-
-        document.getElementById('country_details').innerHTML = '';
-        document.getElementById('region_countries').innerHTML = '';
-
-        const countryCard = createCountryCard(country);
-        document.getElementById('country_details').appendChild(countryCard);
+        const region = country?.region;
 
         if (region) {
-            await loadRegionCountries(region, country.name.common);
+            const regionResponse = await 
+                fetch(`https://restcountries.com/v3.1/region/${region}`);
+            const regionCountries = await regionResponse.json();
+
+            displayCountryDetails(country);
+
+            const otherCountries = regionCountries.filter
+                (c => !c.name.common.includes(country.name.common));
+            displayRegionCountries(otherCountries);
         } else {
-            console.error
-			('Region information not available for the entered country.');
+            alert('Country not found.');
         }
     } catch (error) {
-        console.error('Error:', error.message);
+        console.error('Error fetching data:', error);
+        alert('An error occurred while fetching data.');
     }
 }
 
-async function loadRegionCountries(region, searchedCountryName) {
-    try {
-        const response = await fetch
-			(`https://restcountries.com/v3.1/region/${region}`);
-        const data = await response.json();
-
-        displayRegionCountries(data, searchedCountryName);
-    } catch (error) {
-        console.error('Error fetching region data:', error);
-    }
+function displayCountryDetails(country) {
+    const countryDetailsContainer = 
+        document.getElementById('country_details');
+    countryDetailsContainer.innerHTML =
+        `<div class="country-card">
+            <h2>${country.name.common}</h2>
+            <p>Region: ${country.region}</p>
+            <p>Capital: ${country.capital}</p>
+            <p>Population: ${country.population}</p>
+            <p>Area: ${country.area} km²</p>
+            <p>Language: ${Object.values(country.languages).join(', ')}</p>
+        </div>`;
 }
 
-function createCountryCard(country) {
-    const card = document.createElement('div');
-    card.classList.add('country-card');
-    card.innerHTML = `
-        <h2>${country.name.common}</h2>
-        <p>Region: ${country.region}</p>
-        <p>Capital: ${country.capital}</p>
-        <p>Population: ${country.population}</p>
-        <p>Area: ${country.area ? `${country.area} 
-			square kilometers` : ''}</p>
-        <p>Languages: ${Object.values(country.languages).join(', ')}</p>
-    `;
-    return card;
-}
-
-function displayRegionCountries(countries, searchedCountryName) {
+function displayRegionCountries(regionCountries) {
     const regionCountriesContainer = 
-		document.getElementById('region_countries');
-    regionCountriesContainer.innerHTML = 
-		`<h1>Other Countries in the Same Region:</h1>`;
-
-    const countriesList = document.createElement('ul');
-
-    countries.forEach(country => {
-        if (country.name.common !== searchedCountryName) {
-            const listItem = document.createElement('li');
-            listItem.textContent = country.name.common;
-            countriesList.appendChild(listItem);
-        }
-    });
-
-    regionCountriesContainer.appendChild(countriesList);
+        document.getElementById('region_countries');
+    regionCountriesContainer.innerHTML =
+        `<div class="country-card">
+            <h2><strong>Other countries in the same region:</strong></h2>
+            <ul>${regionCountries.map
+                (country => `<li>${country.name.common}</li>`).join('')}</ul>
+        </div>`;
 }
