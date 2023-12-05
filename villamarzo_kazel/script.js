@@ -1,7 +1,3 @@
-function goToCountryWebpage() {
-  window.location.href = "index.html";
-}
-
 async function searchCountry() {
   const searchInput = document.getElementById('search_input').value;
 
@@ -20,8 +16,8 @@ async function searchCountry() {
 
       displayCountryDetails(country);
 
-      const otherCountries = regionCountries.filter
-		(c => !c.name.common.includes(country.name.common));
+      const otherCountries = regionCountries.filter(
+		c => !c.name.common.includes(country.name.common));
       displayRegionCountries(otherCountries);
     } else {
       alert('Country not found.');
@@ -50,5 +46,5 @@ function displayRegionCountries(regionCountries) {
   regionCountriesContainer.innerHTML =
     `<p><strong>Other countries in the same region:</strong></p>
     <ul>${regionCountries.map(country =>
-		`<li>${country.name.common}</li>`).join('')}</ul>`;
+ `<li>${country.name.common}</li>`).join('')}</ul>`;
 }
